@@ -1,0 +1,93 @@
+/* app.css */
+:root {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    --primary-color: #ffd52c;
+    --secondary-color: #ff5c00;
+    --tertiary-color: #c72d04;
+    --background-color: #111;
+    scrollbar-color: var(--primary-color) var(--secondary-color);
+    font-size: clamp(18px, 3vw, 30px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    cursor: url('./assets/mouse.svg');
+}
+
+.retro-container {
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+    padding: 0.5rem;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    mask-image: linear-gradient(to bottom, #0005 50%, #000 50%);
+    mask-size: 100% 2px;
+    text-shadow: 0 0 0.5rem;
+}
+
+header, footer {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+main {
+    overflow: hidden;
+}
+
+section {
+    height: 100%;
+    overflow: hidden auto;
+    margin: 1rem 0;
+}
+
+#chat-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}
+
+#messages {
+    height: 300px;
+    overflow-y: auto;
+    background-color: #111;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#message-input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00ff00;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00cc00;
+}
